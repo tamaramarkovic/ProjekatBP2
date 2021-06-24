@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47ea3b669df745b48e100c06eee9e3f1" Name="Diagram1" ZoomLevel="95" >
+        <EntityTypeShape EntityType="BeautySalon.Manufacturer" Width="1.5" PointX="5.125" PointY="0.5" />
+        <EntityTypeShape EntityType="BeautySalon.Product" Width="1.5" PointX="0.5" PointY="2.5" />
+        <EntityTypeShape EntityType="BeautySalon.Owner" Width="1.5" PointX="0.5" PointY="4.75" />
+        <EntityTypeShape EntityType="BeautySalon.Shift" Width="1.5" PointX="0.5" PointY="7.5" />
+        <EntityTypeShape EntityType="BeautySalon.Job" Width="1.5" PointX="5" PointY="6.875" />
+        <EntityTypeShape EntityType="BeautySalon.HairStylist" Width="1.5" PointX="3.125" PointY="9.5" />
+        <InheritanceConnector EntityType="BeautySalon.HairStylist" />
+        <EntityTypeShape EntityType="BeautySalon.Beautican" Width="1.5" PointX="5" PointY="9.5" />
+        <InheritanceConnector EntityType="BeautySalon.Beautican" />
+        <EntityTypeShape EntityType="BeautySalon.Barber" Width="1.5" PointX="7" PointY="9.5" />
+        <InheritanceConnector EntityType="BeautySalon.Barber" />
+        <EntityTypeShape EntityType="BeautySalon.Worker" Width="1.5" PointX="10.75" PointY="4.125" />
+        <EntityTypeShape EntityType="BeautySalon.Bill" Width="1.5" PointX="10.75" PointY="8.375" />
+        <EntityTypeShape EntityType="BeautySalon.Service" Width="1.5" PointX="10.875" PointY="11" />
+        <EntityTypeShape EntityType="BeautySalon.Boss" Width="1.5" PointX="13.75" PointY="3.875" />
+        <EntityTypeShape EntityType="BeautySalon.ServiceCompany" Width="1.5" PointX="13.75" PointY="8.25" />
+        <EntityTypeShape EntityType="BeautySalon.Work" Width="1.5" PointX="13.75" PointY="11" />
+        <EntityTypeShape EntityType="BeautySalon.Appoitment" Width="1.5" PointX="7.875" PointY="0.5" />
+        <EntityTypeShape EntityType="BeautySalon.Sector" Width="1.5" PointX="10.625" PointY="0.625" />
+        <EntityTypeShape EntityType="BeautySalon.Collaborate" Width="1.5" PointX="5.125" PointY="3.875" />
+        <AssociationConnector Association="BeautySalon.CollaborateProduct" />
+        <AssociationConnector Association="BeautySalon.OwnerJob" />
+        <AssociationConnector Association="BeautySalon.ShiftJob" />
+        <AssociationConnector Association="BeautySalon.JobWorker" />
+        <AssociationConnector Association="BeautySalon.WorkerBill" />
+        <AssociationConnector Association="BeautySalon.BillService" />
+        <AssociationConnector Association="BeautySalon.BossServiceCompany" />
+        <AssociationConnector Association="BeautySalon.ServiceCompanyWork" />
+        <AssociationConnector Association="BeautySalon.WorkerSector" />
+        <AssociationConnector Association="BeautySalon.AppoitmentWorker" />
+        <AssociationConnector Association="BeautySalon.ManufacturerCollaborate" />
+        <AssociationConnector Association="BeautySalon.OwnerCollaborate" />
+        <AssociationConnector Association="BeautySalon.WorkerBoss" />
+        <AssociationConnector Association="BeautySalon.BossBoss" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

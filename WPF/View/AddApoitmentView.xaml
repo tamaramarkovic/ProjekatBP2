@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPF.View.AddApoitmentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF.View"
+             mc:Ignorable="d" 
+             Height="500" Width="800">
+    <Grid Background="Lavender">
+        <Label Content="Add appoitment" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
+        <Label Content="Name of client" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,314.6" Width="254"></Label>
+        <TextBox Text="{Binding Appoitment.NameOfClient}" FontSize="30" Margin="323,88,181,311.6"></TextBox>
+        <Label Content="Surname of client" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,206.6" Width="308"></Label>
+        <TextBox Text="{Binding Appoitment.SurnameOfClient}" FontSize="30" Margin="323,193,181,206.6"></TextBox>
+        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,379,28,9.6" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,286,0,10.4" Width="578"></Label>
+    </Grid>
+</Window>
