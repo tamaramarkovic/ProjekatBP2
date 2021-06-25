@@ -31,6 +31,14 @@ namespace WPF.ViewModels
             Bill = new Command(AllBills);
             Boss = new Command(AllBosses);
             Collaborate = new Command(AllCollaborations);
+            Manufacturer = new Command(AllManufacturers);
+            Owner = new Command(AllOwners);
+            Product = new Command(AllProducts);
+            Sector = new Command(AllSectors);
+            ServiceCompany = new Command(AllServiceCompanies);
+            Service = new Command(AllServices);
+            Shift = new Command(AllShifts);
+            Work = new Command(AllWorks);
         }
 
         public void AllApoitments()
@@ -59,6 +67,62 @@ namespace WPF.ViewModels
             CollaborateView collaborateView = new CollaborateView();
             collaborateView.DataContext = new CollaborateViewModel(collaborateView);
             collaborateView.ShowDialog();
+        }
+
+        public void AllManufacturers()
+        {
+            ManufacturerView manufacturerView = new ManufacturerView();
+            manufacturerView.DataContext = new ManufacturerViewModel(manufacturerView);
+            manufacturerView.ShowDialog();
+        }
+
+        public void AllOwners()
+        {
+            OwnerView ownerView = new OwnerView();
+            ownerView.DataContext = new OwnerViewModel(ownerView);
+            ownerView.ShowDialog();
+        }
+
+        public void AllProducts()
+        {
+            ProductView productView = new ProductView();
+            productView.DataContext = new ProductViewModel(productView);
+            productView.ShowDialog();
+        }
+
+        public void AllSectors()
+        {
+            SectorView sectorView = new SectorView();
+            sectorView.DataContext = new SectorViewModel(sectorView);
+            sectorView.ShowDialog();
+        }
+
+        public void AllServiceCompanies()
+        {
+            ServiceCompanyView serviceCompanyView = new ServiceCompanyView();
+            serviceCompanyView.DataContext = new ServiceCompanyViewModel(serviceCompanyView);
+            serviceCompanyView.ShowDialog();
+        }
+
+        public void AllServices()
+        {
+            ServiceView serviceView = new ServiceView();
+            serviceView.DataContext = new ServiceViewModel(serviceView);
+            serviceView.ShowDialog();
+        }
+
+        public void AllShifts()
+        {
+            ShiftView shiftView = new ShiftView();
+            shiftView.DataContext = new ShiftViewModel(shiftView);
+            shiftView.ShowDialog();
+        }
+
+        public void AllWorks()
+        {
+            WorkView workView = new WorkView();
+            workView.DataContext = new WorkViewModel(workView);
+            workView.ShowDialog();
         }
     }
 }

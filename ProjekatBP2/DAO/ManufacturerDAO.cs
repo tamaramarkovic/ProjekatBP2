@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjekatBP2.DAO
 {
-    public class ManufacturerDAO
+    public class ManufacturerDAO : BaseRepo<Manufacturer>
     {
         public Manufacturer FindById(int manufacturerId)
         {

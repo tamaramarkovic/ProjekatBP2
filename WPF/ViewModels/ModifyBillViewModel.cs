@@ -42,7 +42,7 @@ namespace WPF.ViewModels
 
             if (Bill.WorkerWorkerId == 0)
             {
-                Error += "Worker ID can not be empty!\n";
+                Error += "Worker ID can not be empty or 0!\n";
             }
 
             if (workerDAO.FindById(Bill.WorkerWorkerId) == null)
@@ -53,9 +53,9 @@ namespace WPF.ViewModels
             if (Error == "")
             {
                 billDAO.Update(Bill);
-            }
 
-            view.Close();
+                view.Close();
+            }
         }
     }
 }

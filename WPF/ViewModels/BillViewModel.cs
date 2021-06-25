@@ -59,9 +59,9 @@ namespace WPF.ViewModels
 
         public void Remove()
         {
-            billDAO.Delete(selectedBill.BillId);
+            billDAO.Delete(SelectedBill.BillId);
             Load();
-            selectedBill = new Bill();
+            SelectedBill = new Bill();
         }
 
         public void Load()

@@ -71,15 +71,42 @@
     <Compile Include="ViewModels\AddBillViewModel.cs" />
     <Compile Include="ViewModels\AddBossViewModel.cs" />
     <Compile Include="ViewModels\AddCollaborateViewModel.cs" />
+    <Compile Include="ViewModels\AddManufacturerViewModel.cs" />
+    <Compile Include="ViewModels\AddOwnerViewModel.cs" />
+    <Compile Include="ViewModels\AddProductViewModel.cs" />
+    <Compile Include="ViewModels\AddSectorViewModel.cs" />
+    <Compile Include="ViewModels\AddServiceCompanyViewModel.cs" />
+    <Compile Include="ViewModels\AddServiceViewModel.cs" />
+    <Compile Include="ViewModels\AddShiftViewModel.cs" />
+    <Compile Include="ViewModels\AddWorkerViewModel.cs" />
+    <Compile Include="ViewModels\AddWorkViewModel.cs" />
     <Compile Include="ViewModels\AppoitmentViewModel.cs" />
     <Compile Include="ViewModels\BillViewModel.cs" />
     <Compile Include="ViewModels\BossViewModel.cs" />
     <Compile Include="ViewModels\CollaborateViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\ManufacturerViewModel.cs" />
     <Compile Include="ViewModels\ModifyAppoitmentViewModel.cs" />
     <Compile Include="ViewModels\ModifyBillViewModel.cs" />
     <Compile Include="ViewModels\ModifyBossViewModel.cs" />
     <Compile Include="ViewModels\ModifyCollaborateViewModel.cs" />
+    <Compile Include="ViewModels\ModifyManufacturerViewModel.cs" />
+    <Compile Include="ViewModels\ModifyOwnerViewModel.cs" />
+    <Compile Include="ViewModels\ModifyProductViewModel.cs" />
+    <Compile Include="ViewModels\ModifySectorViewModel.cs" />
+    <Compile Include="ViewModels\ModifyServiceCompanyViewModel.cs" />
+    <Compile Include="ViewModels\ModifyServiceViewModel.cs" />
+    <Compile Include="ViewModels\ModifyShiftViewModel.cs" />
+    <Compile Include="ViewModels\ModifyWorkerViewModel.cs" />
+    <Compile Include="ViewModels\ModifyWorkViewModel.cs" />
+    <Compile Include="ViewModels\OwnerViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\SectorViewModel.cs" />
+    <Compile Include="ViewModels\ServiceCompanyViewModel.cs" />
+    <Compile Include="ViewModels\ServiceViewModel.cs" />
+    <Compile Include="ViewModels\ShiftViewModel.cs" />
+    <Compile Include="ViewModels\WorkerViewModel.cs" />
+    <Compile Include="ViewModels\WorkViewModel.cs" />
     <Compile Include="View\AddApoitmentView.xaml.cs">
       <DependentUpon>AddApoitmentView.xaml</DependentUpon>
     </Compile>
@@ -91,6 +118,33 @@
     </Compile>
     <Compile Include="View\AddCollaborateView.xaml.cs">
       <DependentUpon>AddCollaborateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddManufacturerView.xaml.cs">
+      <DependentUpon>AddManufacturerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddOwnerView.xaml.cs">
+      <DependentUpon>AddOwnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddProductView.xaml.cs">
+      <DependentUpon>AddProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddSectorView.xaml.cs">
+      <DependentUpon>AddSectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddServiceCompanyView.xaml.cs">
+      <DependentUpon>AddServiceCompanyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddServiceView.xaml.cs">
+      <DependentUpon>AddServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddShiftView.xaml.cs">
+      <DependentUpon>AddShiftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddWorkerView.xaml.cs">
+      <DependentUpon>AddWorkerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddWorkView.xaml.cs">
+      <DependentUpon>AddWorkView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AppoitmentView.xaml.cs">
       <DependentUpon>AppoitmentView.xaml</DependentUpon>
@@ -104,6 +158,9 @@
     <Compile Include="View\CollaborateView.xaml.cs">
       <DependentUpon>CollaborateView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ManufacturerView.xaml.cs">
+      <DependentUpon>ManufacturerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ModifyAppoitmentView.xaml.cs">
       <DependentUpon>ModifyAppoitmentView.xaml</DependentUpon>
     </Compile>
@@ -115,6 +172,57 @@
     </Compile>
     <Compile Include="View\ModifyCollaborateView.xaml.cs">
       <DependentUpon>ModifyCollaborateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyManufacturerView.xaml.cs">
+      <DependentUpon>ModifyManufacturerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyOwnerView.xaml.cs">
+      <DependentUpon>ModifyOwnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyProductView.xaml.cs">
+      <DependentUpon>ModifyProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifySectorView.xaml.cs">
+      <DependentUpon>ModifySectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyServiceCompanyView.xaml.cs">
+      <DependentUpon>ModifyServiceCompanyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyServiceView.xaml.cs">
+      <DependentUpon>ModifyServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyShiftView.xaml.cs">
+      <DependentUpon>ModifyShiftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyWorkerView.xaml.cs">
+      <DependentUpon>ModifyWorkerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyWorkView.xaml.cs">
+      <DependentUpon>ModifyWorkView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OwnerView.xaml.cs">
+      <DependentUpon>OwnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductView.xaml.cs">
+      <DependentUpon>ProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SectorView.xaml.cs">
+      <DependentUpon>SectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServiceCompanyView.xaml.cs">
+      <DependentUpon>ServiceCompanyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServiceView.xaml.cs">
+      <DependentUpon>ServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShiftView.xaml.cs">
+      <DependentUpon>ShiftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerView.xaml.cs">
+      <DependentUpon>WorkerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkView.xaml.cs">
+      <DependentUpon>WorkView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +252,42 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddManufacturerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddOwnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddSectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddServiceCompanyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddShiftView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddWorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddWorkView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AppoitmentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +304,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ManufacturerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ModifyAppoitmentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +321,74 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ModifyCollaborateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyManufacturerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyOwnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifySectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyServiceCompanyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyShiftView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyWorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyWorkView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OwnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ServiceCompanyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShiftView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

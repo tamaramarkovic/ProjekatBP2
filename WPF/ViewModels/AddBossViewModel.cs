@@ -16,6 +16,8 @@ namespace WPF.ViewModels
         private AddBossView view;
         private string error;
         private BossDAO bossDAO = new BossDAO();
+        private List<Worker> workers = new List<Worker>();
+        private WorkerDAO workerDAO = new WorkerDAO();
 
         public ICommand AddComm { get; set; }
 
@@ -23,12 +25,16 @@ namespace WPF.ViewModels
 
         public string Error { get => error; set { error = value; OnPropertyChanged("Error"); } }
 
+        public List<Worker> Workers { get => workers; set { workers = value; OnPropertyChanged("Workers"); } }
+
         public AddBossViewModel(AddBossView view)
         {
             this.view = view;
 
             Boss = new Boss();
             AddComm = new Command(this.AddBoss);
+
+            Workers = workerDAO.GetList();
         }
 
         public void AddBoss()
