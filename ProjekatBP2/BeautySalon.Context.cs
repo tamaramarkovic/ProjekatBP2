@@ -12,6 +12,8 @@ namespace ProjekatBP2
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BeautySalonContainer : DbContext
     {
@@ -39,5 +41,15 @@ namespace ProjekatBP2
         public virtual DbSet<Appoitment> AppoitmentSet { get; set; }
         public virtual DbSet<Sector> SectorSet { get; set; }
         public virtual DbSet<Collaborate> CollaborateSet { get; set; }
+
+        [DbFunction("BeautySalonContainer", "GetAllWorkers")]
+        public virtual ObjectResult<GetAllWorkerSalary_Result> GetAllWorkerSalary(Nullable<int> salary)
+        {
+            var salaryParameter = salary.HasValue ?
+                new ObjectParameter("Salary", salary) :
+                new ObjectParameter("Salary", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllWorkerSalary_Result>("GetAllWorkerSalary", salaryParameter);
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace WPF.ViewModels
         private Worker worker;
         private string error;
         private WorkerDAO workerDAO = new WorkerDAO();
+
         private JobDAO jobDAO = new JobDAO();
         private BossDAO bossDAO = new BossDAO();
 
@@ -71,14 +72,9 @@ namespace WPF.ViewModels
                 Error += "Job does not exsist!\n";
             }
 
-            if (bossDAO.FindById(worker.BossBossId) == null)
-            {
-                Error += "Boss does not exsist!\n";
-            }
-
             if (Error == "")
             {
-                workerDAO.Insert(Worker);
+                workerDAO.Update(Worker);
 
                 view.Close();
             }

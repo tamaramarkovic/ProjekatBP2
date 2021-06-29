@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="AddManufacturerView" Height="380.613" Width="796.938">
+        Title="AddManufacturerView" Height="437.074" Width="582.94">
     <Grid Background="Lavender">
         <Label Content="Add manufacturer" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,198.2" Width="254"></Label>
-        <TextBox Text="{Binding Manufacturer.ManufacturerName}" FontSize="30" Margin="323,88,184.4,216.2"></TextBox>
-        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="611,274,10.4,10.2" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,182,0,10.2" Width="596"></Label>
+        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,263.2" Width="254"></Label>
+        <TextBox Text="{Binding Manufacturer.ManufacturerName}" FontSize="30" Margin="211,88,153.8,263.2"></TextBox>
+        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="431,320,9.8,10.2" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="15" FontWeight="ExtraBold" Margin="28,282,0,10.2" Width="395"></Label>
     </Grid>
 </Window>

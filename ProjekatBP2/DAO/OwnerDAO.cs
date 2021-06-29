@@ -31,5 +31,16 @@ namespace ProjekatBP2.DAO
                 return true;
             }
         }
+
+        public new void Delete(object id)
+        {
+            using (var db = new BeautySalonContainer())
+            {
+                Owner entityToDelete = (from o in db.OwnerSet.Include("Jobs").Include("Collaborate")
+                                        where o.OwnerId == (int)id select o).SingleOrDefault();
+                db.Entry(entityToDelete).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
     }
 }

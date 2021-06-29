@@ -17,5 +17,15 @@ namespace ProjekatBP2.DAO
                         SqlMethods.Like(s.EndTime.ToString(), endTime.ToString()) select s).ToList();
             }
         }
+
+        public new void Delete(object id)
+        {
+            using (var db = new BeautySalonContainer())
+            {
+                Shift entityToDelete = (from s in db.ShiftSet.Include("Jobs") where s.ShiftId == (int)id select s).SingleOrDefault();
+                db.Entry(entityToDelete).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
     }
 }

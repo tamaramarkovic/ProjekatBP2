@@ -8,7 +8,7 @@
         Title="ShiftView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Shifts" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=Shifts, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedShift, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=Shifts, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedShift, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ShiftId}"/>
                 <DataGridTextColumn Header="Start time" Width="*" Binding="{Binding StartTime}"/>

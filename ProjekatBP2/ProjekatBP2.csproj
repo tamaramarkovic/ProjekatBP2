@@ -110,6 +110,9 @@
     <Compile Include="Gender.cs">
       <DependentUpon>BeautySalon.tt</DependentUpon>
     </Compile>
+    <Compile Include="GetAllWorkerSalary_Result.cs">
+      <DependentUpon>BeautySalon.tt</DependentUpon>
+    </Compile>
     <Compile Include="HairStylist.cs">
       <DependentUpon>BeautySalon.tt</DependentUpon>
     </Compile>

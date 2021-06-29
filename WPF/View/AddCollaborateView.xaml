@@ -8,11 +8,11 @@
         Title="AddCollaborateView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Add collaborate" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Manufacturer ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,314.4" Width="308"></Label>
-        <TextBox Text="{Binding Collaborate.ManufacturerManufacturerId1}" FontSize="30" Margin="323,88,181,311.6"></TextBox>
-        <Label Content="Owner ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,206.6" Width="308"></Label>
-        <TextBox Text="{Binding Collaborate.OwnerOwnerId}" FontSize="30" Margin="323,193,181,206.6"></TextBox>
-        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,379,28,9.6" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,286,0,10.4" Width="578"></Label>
+        <Label Content="Manufacturer ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,323.4" Width="308"></Label>
+        <TextBox Text="{Binding Collaborate.ManufacturerManufacturerId1}" FontSize="30" Margin="323,88,180.6,323.4"></TextBox>
+        <Label Content="Owner ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,218.4" Width="308"></Label>
+        <TextBox Text="{Binding Collaborate.OwnerOwnerId}" FontSize="30" Margin="323,193,180.6,218.4"></TextBox>
+        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="612,388,9.6,10.4" FontWeight="ExtraBold" RenderTransformOrigin="0.577,0.446"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,279,0,10.4" Width="578"></Label>
     </Grid>
 </Window>

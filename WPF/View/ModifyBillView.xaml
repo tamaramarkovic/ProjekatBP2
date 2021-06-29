@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="ModifyBillView" Height="500" Width="800">
+        Title="ModifyBillView" Height="684.8" Width="819.2">
     <Grid Background="Lavender">
         <Label Content="Modify bill" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Date" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,314.6" Width="254"></Label>
-        <TextBox Text="{Binding Bill.Date}" FontSize="30" Margin="323,88,181,311.6"></TextBox>
-        <Label Content="Worker ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,206.6" Width="308"></Label>
-        <TextBox Text="{Binding Bill.WorkerWorkerId}" FontSize="30" Margin="323,193,181,206.6"></TextBox>
-        <Button Command="{Binding ModifyComm}" Content="Modify" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,379,28,9.6" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,286,0,10.4" Width="578"></Label>
+        <Label Content="Date" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,500.2" Width="308"></Label>
+        <TextBox Text="{Binding Bill.Date, StringFormat=dd-MM-yyyy}" FontSize="30" Margin="323,88,180.8,500.2"></TextBox>
+        <Label Content="Worker ID" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,394.2" Width="308"></Label>
+        <TextBox Text="{Binding Bill.WorkerWorkerId}" FontSize="30" Margin="323,193,180.8,394.2"></TextBox>
+        <Button Content="Modify" Command="{Binding ModifyComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="611,531,9.8,9.2" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,531,0,10.2" Width="578"></Label>
+
+        <Label Content="Services" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,286,0,237.2" Width="205"></Label>
+        <ListView x:Name="ServicesList" BorderBrush="Gray" BorderThickness="4" ItemsSource="{Binding Services}" DisplayMemberPath="Price" SelectionMode="Multiple" MouseUp="ServicesList_MouseUp" Margin="323,286,180.8,135.2">
+        </ListView>
     </Grid>
 </Window>

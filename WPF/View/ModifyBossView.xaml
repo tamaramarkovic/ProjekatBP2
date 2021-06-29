@@ -5,16 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="ModifyBossView" Height="647" Width="1028">
+        Title="ModifyBossView" Height="700" Width="852.8">
     <Grid Background="Lavender">
         <Label Content="Modify boss" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,88,0,474.6" Width="284"></Label>
-        <TextBox Text="{Binding Boss.BossName}" FontSize="30" Margin="328,88,180.6,474.6"></TextBox>
-        <Label Content="Surname" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,172,0,374.6" Width="284" RenderTransformOrigin="0.477,0.932"></Label>
-        <TextBox Text="{Binding Boss.BossSurname}" FontSize="30" Margin="328,172,175.6,374.6"></TextBox>
-        <Label Content="Super boss" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,279,0,266.6" Width="284"></Label>
-        <TextBox Text="{Binding Boss.BossBossId1}" FontSize="30" Margin="328,278,180.6,266.6"></TextBox>
-        <Button Content="Modify" Command="{Binding ModifyComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="802,513,34.6,9.6" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="29,389,0,9.6" Width="703"></Label>
+        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,88,0,521.4" Width="284"></Label>
+        <TextBox Text="{Binding Boss.BossName}" FontSize="30" Margin="328,88,175.4,521.4"></TextBox>
+        <Label Content="Surname" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,172,0,433.4" Width="284" RenderTransformOrigin="0.5,0.5"></Label>
+        <TextBox Text="{Binding Boss.BossSurname}" FontSize="30" Margin="328,172,175.4,433.4"></TextBox>
+        <Label Content="Super boss" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,260,0,339.4" Width="284"></Label>
+        <TextBox Text="{Binding Boss.BossBossId1}" FontSize="30" Margin="328,260,175.4,339.4"></TextBox>
+        <Button Content="Modify" Command="{Binding ModifyComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="679,568,10.4,10.4" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="15" FontWeight="ExtraBold" Margin="29,536,0,9.4" Width="645"></Label>
+
+        <Label Content="Workers" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="29,362,0,239.4" Width="205"></Label>
+        <ListView x:Name="WorkersList" BorderBrush="Gray" BorderThickness="4" ItemsSource="{Binding Workers}" SelectionMode="Multiple" Margin="331,362,175.4,139.4" MouseUp="WorkersList_MouseUp">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0}-{1}">
+                                <Binding Path="WorkerName"/>
+                                <Binding Path="WorkerSurname"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

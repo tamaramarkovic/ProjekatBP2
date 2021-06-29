@@ -12,7 +12,7 @@
         <TextBox Text="{Binding Worker.WorkerName}" FontSize="30" Margin="323,88,175.8,606.6"></TextBox>
         <Label Content="Surname" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,162,0,524.6" Width="308"></Label>
         <TextBox Text="{Binding Worker.WorkerSurname}" FontSize="30" Margin="323,162,175.8,533.6"></TextBox>
-        <Label Content="Salary" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,244,0,442.6" Width="308"></Label>
+        <Label Content="Salary" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,244,0,425.6" Width="308"></Label>
         <TextBox Text="{Binding Worker.Salary}" FontSize="30" Margin="323,244,175.8,451.6"></TextBox>
         <Label Content="Date of birth" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,325,0,361.6" Width="308"></Label>
         <TextBox Text="{Binding Worker.WorkerDOB, StringFormat=dd-MM-yyyy}" FontSize="30" Margin="323,325,175.8,370.6"></TextBox>

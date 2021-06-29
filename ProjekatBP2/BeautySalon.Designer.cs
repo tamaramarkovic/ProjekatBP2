@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'T:\Moji fajlovi\Faks\Cetvrta godina\8. semestar\BP2\ProjekatBP2\ProjekatBP2\BeautySalon.edmx'. 
+﻿// T4 code generation is enabled for model 'T:\Moji fajlovi\Faks\Cetvrta godina\8. semestar\BP2\ProjekatBP2-Git\ProjekatBP2\BeautySalon.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

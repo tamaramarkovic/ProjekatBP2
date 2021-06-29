@@ -68,9 +68,12 @@
     <Compile Include="BindableBase.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="ViewModels\AddApoitmentViewModel.cs" />
+    <Compile Include="ViewModels\AddBarberViewModel.cs" />
+    <Compile Include="ViewModels\AddBeauticanViewModel.cs" />
     <Compile Include="ViewModels\AddBillViewModel.cs" />
     <Compile Include="ViewModels\AddBossViewModel.cs" />
     <Compile Include="ViewModels\AddCollaborateViewModel.cs" />
+    <Compile Include="ViewModels\AddHairStylistViewModel.cs" />
     <Compile Include="ViewModels\AddManufacturerViewModel.cs" />
     <Compile Include="ViewModels\AddOwnerViewModel.cs" />
     <Compile Include="ViewModels\AddProductViewModel.cs" />
@@ -81,15 +84,22 @@
     <Compile Include="ViewModels\AddWorkerViewModel.cs" />
     <Compile Include="ViewModels\AddWorkViewModel.cs" />
     <Compile Include="ViewModels\AppoitmentViewModel.cs" />
+    <Compile Include="ViewModels\BarberViewModel.cs" />
+    <Compile Include="ViewModels\BeauticanViewModel.cs" />
     <Compile Include="ViewModels\BillViewModel.cs" />
     <Compile Include="ViewModels\BossViewModel.cs" />
     <Compile Include="ViewModels\CollaborateViewModel.cs" />
+    <Compile Include="ViewModels\GetAllWorkerSalaryViewModel.cs" />
+    <Compile Include="ViewModels\HairStylistViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\ManufacturerViewModel.cs" />
     <Compile Include="ViewModels\ModifyAppoitmentViewModel.cs" />
+    <Compile Include="ViewModels\ModifyBarberViewModel.cs" />
+    <Compile Include="ViewModels\ModifyBeauticanViewModel.cs" />
     <Compile Include="ViewModels\ModifyBillViewModel.cs" />
     <Compile Include="ViewModels\ModifyBossViewModel.cs" />
     <Compile Include="ViewModels\ModifyCollaborateViewModel.cs" />
+    <Compile Include="ViewModels\ModifyHairStylistViewModel.cs" />
     <Compile Include="ViewModels\ModifyManufacturerViewModel.cs" />
     <Compile Include="ViewModels\ModifyOwnerViewModel.cs" />
     <Compile Include="ViewModels\ModifyProductViewModel.cs" />
@@ -110,6 +120,12 @@
     <Compile Include="View\AddApoitmentView.xaml.cs">
       <DependentUpon>AddApoitmentView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AddBarberView.xaml.cs">
+      <DependentUpon>AddBarberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddBeauticanView.xaml.cs">
+      <DependentUpon>AddBeauticanView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddBillView.xaml.cs">
       <DependentUpon>AddBillView.xaml</DependentUpon>
     </Compile>
@@ -118,6 +134,9 @@
     </Compile>
     <Compile Include="View\AddCollaborateView.xaml.cs">
       <DependentUpon>AddCollaborateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddHairStylistView.xaml.cs">
+      <DependentUpon>AddHairStylistView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AddManufacturerView.xaml.cs">
       <DependentUpon>AddManufacturerView.xaml</DependentUpon>
@@ -149,6 +168,12 @@
     <Compile Include="View\AppoitmentView.xaml.cs">
       <DependentUpon>AppoitmentView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\BarberView.xaml.cs">
+      <DependentUpon>BarberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeauticanView.xaml.cs">
+      <DependentUpon>BeauticanView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\BillView.xaml.cs">
       <DependentUpon>BillView.xaml</DependentUpon>
     </Compile>
@@ -158,11 +183,23 @@
     <Compile Include="View\CollaborateView.xaml.cs">
       <DependentUpon>CollaborateView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\GetAllWorkerSalaryView.xaml.cs">
+      <DependentUpon>GetAllWorkerSalaryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HairStylistView.xaml.cs">
+      <DependentUpon>HairStylistView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ManufacturerView.xaml.cs">
       <DependentUpon>ManufacturerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ModifyAppoitmentView.xaml.cs">
       <DependentUpon>ModifyAppoitmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyBarberView.xaml.cs">
+      <DependentUpon>ModifyBarberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyBeauticanView.xaml.cs">
+      <DependentUpon>ModifyBeauticanView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ModifyBillView.xaml.cs">
       <DependentUpon>ModifyBillView.xaml</DependentUpon>
@@ -172,6 +209,9 @@
     </Compile>
     <Compile Include="View\ModifyCollaborateView.xaml.cs">
       <DependentUpon>ModifyCollaborateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyHairStylistView.xaml.cs">
+      <DependentUpon>ModifyHairStylistView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ModifyManufacturerView.xaml.cs">
       <DependentUpon>ModifyManufacturerView.xaml</DependentUpon>
@@ -240,6 +280,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddBarberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddBeauticanView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddBillView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -249,6 +297,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AddCollaborateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddHairStylistView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -292,6 +344,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\BarberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BeauticanView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\BillView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -304,11 +364,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\GetAllWorkerSalaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HairStylistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ManufacturerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ModifyAppoitmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyBarberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyBeauticanView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -321,6 +397,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ModifyCollaborateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModifyHairStylistView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

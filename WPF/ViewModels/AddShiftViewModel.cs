@@ -46,7 +46,7 @@ namespace WPF.ViewModels
                 Error += "End time can not be empty!\n";
             }
 
-            if (jobDAO.FindById(Shift.JobJobId) == null)
+            if (shift.JobJobId != null && jobDAO.FindById(Shift.JobJobId) == null)
             {
                 Error += "Job does not exsist!\n";
             }

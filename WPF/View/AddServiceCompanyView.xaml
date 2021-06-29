@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="AddServiceCompanyView" Height="500" Width="800">
+        Title="AddServiceCompanyView" Height="629.6" Width="783.2">
     <Grid Background="Lavender">
         <Label Content="Add service company" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,314.4" Width="308"></Label>
-        <TextBox Text="{Binding ServiceCompany.CompanyName}" FontSize="30" Margin="323,88,181,311.6"></TextBox>
-        <Label Content="Phone number" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,206.6" Width="308"></Label>
-        <TextBox Text="{Binding ServiceCompany.PhoneNumber}" FontSize="30" Margin="323,193,181,206.6"></TextBox>
-        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,379,28,9.6" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,286,0,10.4" Width="578"></Label>
+        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,88,0,437" Width="308"></Label>
+        <TextBox Text="{Binding ServiceCompany.CompanyName}" FontSize="30" Margin="328,88,185.8,464"></TextBox>
+        <Label Content="Phone number" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,168,0,354" Width="308"></Label>
+        <TextBox Text="{Binding ServiceCompany.PhoneNumber}" FontSize="30" Margin="323,168,185.8,382"></TextBox>
+        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,507,28,10" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,430,0,10" Width="560"></Label>
+
+        <Label Content="Works" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="15,246,0,277" Width="303"></Label>
+        <ListView x:Name="WorksList" BorderBrush="Gray" BorderThickness="4" ItemsSource="{Binding Works}" DisplayMemberPath="WorkName"  SelectionMode="Multiple" Margin="323,251,180.8,170" MouseUp="WorksList_MouseUp">
+        </ListView>
     </Grid>
 </Window>

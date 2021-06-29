@@ -8,10 +8,10 @@
         Title="CollaborateView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Collaborations" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=Collaborations, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedCollaborate, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=Collaborations, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedCollaborate, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding CollaborateId}"/>
-                <DataGridTextColumn Header="Manufacturer ID" Width="*" Binding="{Binding ManufacturerManufacturerId}"/>
+                <DataGridTextColumn Header="Manufacturer ID" Width="*" Binding="{Binding ManufacturerManufacturerId1}"/>
                 <DataGridTextColumn Header="Owner ID" Width="*" Binding="{Binding OwnerOwnerId}"/>
             </DataGrid.Columns>
         </DataGrid>

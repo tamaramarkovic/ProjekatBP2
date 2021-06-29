@@ -8,11 +8,19 @@
         Title="ServiceCompanyView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Sevice companies" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=ServiceCompanies, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedServiceCompany, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=ServiceCompanies, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedServiceCompany, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding CompanyId}"/>
                 <DataGridTextColumn Header="Name" Width="*" Binding="{Binding CompanyName}"/>
                 <DataGridTextColumn Header="Phone number" Width="*" Binding="{Binding PhoneNumber}"/>
+                <DataGridTemplateColumn Header="Work" Width="*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Work}" DisplayMemberPath="WorkName" SelectedIndex="0">
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add" BorderThickness="4" Background="DarkRed" Margin="10,383,663,9.6" Foreground="LightBlue" FontSize="20" Command="{Binding AddComm}"></Button>

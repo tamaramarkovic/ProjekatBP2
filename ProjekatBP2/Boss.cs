@@ -26,7 +26,7 @@ namespace ProjekatBP2
         public string BossName { get; set; }
         public string BossSurname { get; set; }
         public int BossBossId { get; set; }
-        public Nullable<int> BossBossId1 { get; set; }//super boss
+        public Nullable<int> BossBossId1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServiceCompany> ServiceCompanies { get; set; }

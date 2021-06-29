@@ -16,7 +16,9 @@
         <Button x:Name="btnProduct" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="124,171,1292,592" Command="{Binding Product}"></Button>
         <Button x:Name="btnOwner" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="124,296,1292,466" Command="{Binding Owner}"></Button>
         <Button x:Name="btnShift" BorderThickness="4" BorderBrush="Red" Background="Transparent"  Margin="124,521,1292,240" Command="{Binding Shift}"></Button>
-        <Button x:Name="btnJob" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="505,515,910,247" Command="{Binding Job}"></Button>
+        <Button x:Name="btnHairStylist" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="403,712,1012,50" Command="{Binding HairStylist}"></Button>
+        <Button x:Name="btnBeautican" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="505,712,910,50" Command="{Binding Beautican}"></Button>
+        <Button x:Name="btnBarber" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="607,711,808,51" Command="{Binding Barber}"></Button>
         <Button x:Name="btnAppoitment" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="598,60,818,702" Command="{Binding Appoitment}"></Button>
         <Button x:Name="btnSector" BorderThickness="4" BorderBrush="Red" Background="Transparent" Margin="915,60,503,702" Command="{Binding Sector}"></Button>
         <Button x:Name="btnWorker" BorderThickness="4" BorderBrush="Red" Background="Transparent" Foreground="Black" FontSize="15" Margin="915,291,503,470" Command="{Binding Worker}"></Button>
@@ -25,5 +27,6 @@
         <Button x:Name="btnServiceCompany" BorderThickness="4" BorderBrush="Red" Background="Transparent" Foreground="Black" FontSize="15" Margin="1260,511,156,253" Command="{Binding ServiceCompany}"></Button>
         <Button x:Name="btnService" BorderThickness="4" BorderBrush="Red" Background="Transparent" Foreground="Black" FontSize="15" Margin="915,712,501,51" Command="{Binding Service}"></Button>
         <Button x:Name="btnWork" BorderThickness="4" BorderBrush="Red" Background="Transparent" Foreground="Black" FontSize="15" Margin="1260,710,156,54" Command="{Binding Work}"></Button>
+        <Button x:Name="btnSalary" BorderThickness="4" BorderBrush="DarkRed" Background="Transparent" Foreground="Black" FontSize="15" Margin="997,330,419,434" Command="{Binding Salary}"></Button>
     </Grid>
 </Window>

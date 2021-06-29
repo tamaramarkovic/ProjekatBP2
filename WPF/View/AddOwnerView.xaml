@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="AddOwnerView" Height="500" Width="800">
+        Title="AddOwnerView" Height="446.4" Width="600">
     <Grid Background="Lavender">
         <Label Content="Add owner" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,88,0,314.4" Width="308"></Label>
-        <TextBox Text="{Binding Owner.OwnerName}" FontSize="30" Margin="323,88,181,311.6"></TextBox>
-        <Label Content="Surname" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,193,0,206.6" Width="308"></Label>
-        <TextBox Text="{Binding Owner.OwnerSurname}" FontSize="30" Margin="323,193,181,206.6"></TextBox>
-        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="593,379,28,9.6" FontWeight="ExtraBold"></Button>
-        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="20" FontWeight="ExtraBold" Margin="10,286,0,10.4" Width="578"></Label>
+        <Label Content="Name" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,97,0,249.8" Width="218"></Label>
+        <TextBox Text="{Binding Owner.OwnerName}" FontSize="30" Margin="228,97,110.6,266.8"></TextBox>
+        <Label Content="Surname" HorizontalAlignment="Left" FontSize="35" Foreground="Red" Margin="10,172,0,175.8" Width="218"></Label>
+        <TextBox Text="{Binding Owner.OwnerSurname}" FontSize="30" Margin="228,172,110.6,193.8"></TextBox>
+        <Button Content="Add" Command="{Binding AddComm}" BorderThickness="4" Background="DarkRed" Foreground="LightBlue" FontSize="20" Margin="460,326,9.6,9.8" FontWeight="ExtraBold"></Button>
+        <Label Content="{Binding Error}" HorizontalAlignment="Left" FontSize="10" FontWeight="ExtraBold" Margin="10,276,0,9.8" Width="463"></Label>
     </Grid>
 </Window>

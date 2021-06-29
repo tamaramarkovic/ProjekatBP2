@@ -24,5 +24,15 @@ namespace ProjekatBP2.DAO
                 return (from a in db.AppoitmentSet where SqlMethods.Like(a.NameOfClient, "%" + surnameOfClient + "%") select a).ToList();
             }
         }
+
+        public new void Delete(object id)
+        {
+            using (var db = new BeautySalonContainer())
+            {
+                Appoitment entityToDelete = (from a in db.AppoitmentSet.Include("Workers") where a.AppoitmentId == (int)id select a).SingleOrDefault();
+                db.Entry(entityToDelete).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
     }
 }

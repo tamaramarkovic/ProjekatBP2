@@ -8,12 +8,20 @@
         Title="BossView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Bosses" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=Bosses, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBoss, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=Bosses, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBoss, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding BossId}"/>
                 <DataGridTextColumn Header="Name" Width="*" Binding="{Binding BossName}"/>
                 <DataGridTextColumn Header="Surname" Width="*" Binding="{Binding BossSurname}"/>
                 <DataGridTextColumn Header="Super boss" Width="*" Binding="{Binding BossBossId1}"/>
+                <DataGridTemplateColumn Header="Worker" Width="*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Workers}" DisplayMemberPath="WorkerName" SelectedIndex="0">
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add" BorderThickness="4" Background="DarkRed" Margin="10,383,663,9.6" Foreground="LightBlue" FontSize="20" Command="{Binding AddComm}"></Button>

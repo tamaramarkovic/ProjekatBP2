@@ -57,7 +57,7 @@ namespace WPF.ViewModels
                 Error += "Date of birth can not be empty!\n";
             }
 
-            if (worker.UMCN == "" || worker.UMCN == null)
+            if (worker.UMCN == "" || worker.UMCN == null || worker.UMCN == "0")
             {
                 Error += "UMCN can not be empty or 0!\n";
             }
@@ -70,11 +70,6 @@ namespace WPF.ViewModels
             if (jobDAO.FindById(worker.JobJobId) == null)
             {
                 Error += "Job does not exsist!\n";
-            }
-
-            if (bossDAO.FindById(worker.BossBossId) == null)
-            {
-                Error += "Boss does not exsist!\n";
             }
 
             if (Error == "")

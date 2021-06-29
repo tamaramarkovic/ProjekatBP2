@@ -17,9 +17,16 @@ namespace WPF.ViewModels
         private string error;
         private OwnerDAO ownerDAO = new OwnerDAO();
 
+        private CollaborateDAO collaborateDAO = new CollaborateDAO();
+        private List<Collaborate> collaborations = new List<Collaborate>();
+        private List<Collaborate> selectedCollaborations = new List<Collaborate>();
+
         public ICommand ModifyComm { get; set; }
         public Owner Owner { get => owner; set { owner = value; OnPropertyChanged("Owner"); } }
         public string Error { get => error; set { error = value; OnPropertyChanged("Error"); } }
+
+        public List<Collaborate> Collaborations { get => collaborations; set { collaborations = value; OnPropertyChanged("Collaborations"); } }
+        public List<Collaborate> SelectedCollaborations { get => selectedCollaborations; set { selectedCollaborations = value; OnPropertyChanged("SelectedCollaborations"); } }
 
         public ModifyOwnerViewModel(ModifyOwnerView view, Owner owner)
         {
@@ -28,6 +35,8 @@ namespace WPF.ViewModels
             Owner = owner;
 
             ModifyComm = new Command(this.Modify);
+
+            Collaborations = collaborateDAO.GetList();
         }
 
         public void Modify()

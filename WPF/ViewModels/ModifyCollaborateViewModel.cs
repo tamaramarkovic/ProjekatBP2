@@ -59,9 +59,9 @@ namespace WPF.ViewModels
             if (Error == "")
             {
                 collaborateDAO.Update(Collaborate);
-            }
 
-            view.Close();
+                view.Close();
+            }
         }
     }
 }

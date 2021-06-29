@@ -15,6 +15,9 @@ namespace WPF.ViewModels
         public ICommand Boss { get; set; }
         public ICommand Collaborate { get; set; }
         public ICommand Job { get; set; }
+        public ICommand HairStylist { get; set; }
+        public ICommand Beautican { get; set; }
+        public ICommand Barber { get; set; }
         public ICommand Manufacturer { get; set; }
         public ICommand Owner { get; set; }
         public ICommand Product { get; set; }
@@ -24,6 +27,7 @@ namespace WPF.ViewModels
         public ICommand Shift { get; set; }
         public ICommand Work { get; set; }
         public ICommand Worker { get; set; }
+        public ICommand Salary { get; set; }
 
         public MainWindowViewModel()
         {
@@ -31,6 +35,9 @@ namespace WPF.ViewModels
             Bill = new Command(AllBills);
             Boss = new Command(AllBosses);
             Collaborate = new Command(AllCollaborations);
+            HairStylist = new Command(AllHairStylists);
+            Beautican = new Command(AllBeauticans);
+            Barber = new Command(AllBarbers);
             Manufacturer = new Command(AllManufacturers);
             Owner = new Command(AllOwners);
             Product = new Command(AllProducts);
@@ -39,6 +46,8 @@ namespace WPF.ViewModels
             Service = new Command(AllServices);
             Shift = new Command(AllShifts);
             Work = new Command(AllWorks);
+            Worker = new Command(AllWorkers);
+            Salary = new Command(AllSalaries);
         }
 
         public void AllApoitments()
@@ -67,6 +76,27 @@ namespace WPF.ViewModels
             CollaborateView collaborateView = new CollaborateView();
             collaborateView.DataContext = new CollaborateViewModel(collaborateView);
             collaborateView.ShowDialog();
+        }
+
+        public void AllHairStylists()
+        {
+            HairStylistView hairStylistView = new HairStylistView();
+            hairStylistView.DataContext = new HairStylistViewModel(hairStylistView);
+            hairStylistView.ShowDialog();
+        }
+
+        public void AllBeauticans()
+        {
+            BeauticanView beauticanView = new BeauticanView();
+            beauticanView.DataContext = new BeauticanViewModel(beauticanView);
+            beauticanView.ShowDialog();
+        }
+
+        public void AllBarbers()
+        {
+            BarberView barberView = new BarberView();
+            barberView.DataContext = new BarberViewModel(barberView);
+            barberView.ShowDialog();
         }
 
         public void AllManufacturers()
@@ -123,6 +153,20 @@ namespace WPF.ViewModels
             WorkView workView = new WorkView();
             workView.DataContext = new WorkViewModel(workView);
             workView.ShowDialog();
+        }
+
+        public void AllWorkers()
+        {
+            WorkerView workerView = new WorkerView();
+            workerView.DataContext = new WorkerViewModel(workerView);
+            workerView.ShowDialog();
+        }
+
+        public void AllSalaries()
+        {
+            GetAllWorkerSalaryView salariesView = new GetAllWorkerSalaryView();
+            salariesView.DataContext = new GetAllWorkerSalaryViewModel(salariesView);
+            salariesView.ShowDialog();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ProjekatBP2.DAO
         {
             using (var db = new BeautySalonContainer())
             {
-                return (from j in db.JobSet.OfType<HairStylist>() select j).ToList();
+                return (from j in db.JobSet.Include("Shift").OfType<HairStylist>() select j).ToList();
             }
         }
 
@@ -21,7 +21,7 @@ namespace ProjekatBP2.DAO
         {
             using (var db = new BeautySalonContainer())
             {
-                return (from j in db.JobSet.OfType<Beautican>() select j).ToList();
+                return (from j in db.JobSet.Include("Shift").OfType<Beautican>() select j).ToList();
             }
         }
 
@@ -29,7 +29,17 @@ namespace ProjekatBP2.DAO
         {
             using (var db = new BeautySalonContainer())
             {
-                return (from j in db.JobSet.OfType<Barber>() select j).ToList();
+                return (from j in db.JobSet.Include("Shift").OfType<Barber>() select j).ToList();
+            }
+        }
+
+        public new void Delete(object id)
+        {
+            using (var db = new BeautySalonContainer())
+            {
+                Job entityToDelete = (from j in db.JobSet.Include("Shift").Include("Worker").Include("Owners") where j.JobId == (int)id select j).SingleOrDefault();
+                db.Entry(entityToDelete).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
             }
         }
     }

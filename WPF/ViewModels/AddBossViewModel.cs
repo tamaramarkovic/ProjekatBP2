@@ -16,8 +16,10 @@ namespace WPF.ViewModels
         private AddBossView view;
         private string error;
         private BossDAO bossDAO = new BossDAO();
+
         private List<Worker> workers = new List<Worker>();
         private WorkerDAO workerDAO = new WorkerDAO();
+        private List<Worker> selectedWorkers = new List<Worker>();
 
         public ICommand AddComm { get; set; }
 
@@ -27,6 +29,8 @@ namespace WPF.ViewModels
 
         public List<Worker> Workers { get => workers; set { workers = value; OnPropertyChanged("Workers"); } }
 
+        public List<Worker> SelectedWorkers { get => selectedWorkers; set { selectedWorkers = value; OnPropertyChanged("SelectedWorkers"); } }
+
         public AddBossViewModel(AddBossView view)
         {
             this.view = view;
@@ -34,6 +38,7 @@ namespace WPF.ViewModels
             Boss = new Boss();
             AddComm = new Command(this.AddBoss);
 
+            SelectedWorkers = new List<Worker>();
             Workers = workerDAO.GetList();
         }
 
@@ -51,8 +56,15 @@ namespace WPF.ViewModels
                 Error += "Surname can not be empty!\n";
             }
 
+            if (SelectedWorkers.Count == 0)
+            {
+                Error += "Must select at least 1 worker!\n";
+            }
+
             if (Error == "")
             {
+                boss.Workers = selectedWorkers;
+
                 bossDAO.Insert(Boss);
 
                 view.Close();

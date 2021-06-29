@@ -16,7 +16,7 @@ namespace ProjekatBP2.DAO
             }
         }
 
-        public List<Manufacturer> GetList()
+        public new List<Manufacturer> GetList()
         {
             using (var db = new BeautySalonContainer())
             {
@@ -24,7 +24,7 @@ namespace ProjekatBP2.DAO
             }
         }
 
-        public void Insert(Manufacturer manufacturer)
+        public new void Insert(Manufacturer manufacturer)
         {
             using (var db = new BeautySalonContainer())
             {
@@ -33,7 +33,7 @@ namespace ProjekatBP2.DAO
             }
         }
 
-        public void Delete(int manufacturerId)
+        public new void Delete(int manufacturerId)
         {
             using (var db = new BeautySalonContainer())
             {
@@ -43,7 +43,7 @@ namespace ProjekatBP2.DAO
             }
         }
 
-        public void Update(Manufacturer manufacturer)
+        public new void Update(Manufacturer manufacturer)
         {
             using (var db = new BeautySalonContainer())
             {
@@ -64,6 +64,17 @@ namespace ProjekatBP2.DAO
                 }
 
                 return true;
+            }
+        }
+
+        public new void Delete(object id)
+        {
+            using (var db = new BeautySalonContainer())
+            {
+                Manufacturer entityToDelete = (from m in db.ManufacturerSet.Include("Collaborate")
+                                               where m.ManufacturerId == (int)id select m).SingleOrDefault();
+                db.Entry(entityToDelete).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
             }
         }
     }

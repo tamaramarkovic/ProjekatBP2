@@ -8,11 +8,19 @@
         Title="BillView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Bills" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=Bills, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBill, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=Bills, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBill, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding BillId}"/>
                 <DataGridTextColumn Header="Date" Width="*" Binding="{Binding Date}"/>
                 <DataGridTextColumn Header="Worker ID" Width="*" Binding="{Binding WorkerWorkerId}"/>
+                <DataGridTemplateColumn Header="Service" Width="*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Services}" DisplayMemberPath="ServiceId" SelectedIndex="0">
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add" BorderThickness="4" Background="DarkRed" Margin="10,383,663,9.6" Foreground="LightBlue" FontSize="20" Command="{Binding AddComm}"></Button>

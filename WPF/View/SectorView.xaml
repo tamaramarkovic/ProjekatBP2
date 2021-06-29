@@ -8,7 +8,7 @@
         Title="SectorView" Height="500" Width="800">
     <Grid Background="Lavender">
         <Label Content="Sectors" HorizontalAlignment="Center" FontSize="35" Foreground="Red" FontWeight="ExtraBold"></Label>
-        <DataGrid ItemsSource="{Binding Path=Sectors, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedSector, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderThickness="10" Margin="10,77,10,123.6">
+        <DataGrid ItemsSource="{Binding Path=Sectors, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedSector, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="10" Margin="10,77,10,123.6">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding SectorId}"/>
                 <DataGridTextColumn Header="Name" Width="*" Binding="{Binding SectorName}"/>
